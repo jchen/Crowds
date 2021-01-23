@@ -22,14 +22,11 @@ class MyDeviceViewController: UIViewController {
         
         // The subview inside the collection view cell
         myPhoneCard.layer.cornerRadius = 16.0
-        myPhoneCard.layer.shadowColor = UIColor.gray.cgColor
         
         sharingInfoView.layer.cornerRadius = 16.0
-        sharingInfoView.layer.shadowColor = UIColor.gray.cgColor
         sharingInfoView.clipsToBounds = true
         
         toggleSharingButton.layer.cornerRadius = 15
-
 
         // Do any additional setup after loading the view.
     }
