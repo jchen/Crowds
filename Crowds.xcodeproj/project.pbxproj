@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9EDE373CE9E1210F05A311D /* Pods_Crowds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D89D204B6AE59F4F6298E7 /* Pods_Crowds.framework */; };
 		D7B573BB25BCC961001B0F5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B573BA25BCC961001B0F5A /* AppDelegate.swift */; };
 		D7B573BD25BCC961001B0F5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B573BC25BCC961001B0F5A /* SceneDelegate.swift */; };
 		D7B573BF25BCC961001B0F5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B573BE25BCC961001B0F5A /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F2FD665C2921B78366F8ABD /* Pods-Crowds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crowds.debug.xcconfig"; path = "Target Support Files/Pods-Crowds/Pods-Crowds.debug.xcconfig"; sourceTree = "<group>"; };
+		78D89D204B6AE59F4F6298E7 /* Pods_Crowds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crowds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B573B725BCC961001B0F5A /* Crowds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crowds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B573BA25BCC961001B0F5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7B573BC25BCC961001B0F5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		D7B573C325BCC963001B0F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7B573C625BCC963001B0F5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7B573C825BCC963001B0F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1AEC68E94F46730C1496716 /* Pods-Crowds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crowds.release.xcconfig"; path = "Target Support Files/Pods-Crowds/Pods-Crowds.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,19 +35,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9EDE373CE9E1210F05A311D /* Pods_Crowds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1905ADC04FEEFCB45903D4C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FD665C2921B78366F8ABD /* Pods-Crowds.debug.xcconfig */,
+				F1AEC68E94F46730C1496716 /* Pods-Crowds.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D7B573AE25BCC961001B0F5A = {
 			isa = PBXGroup;
 			children = (
 				D7B573B925BCC961001B0F5A /* Crowds */,
 				D7B573B825BCC961001B0F5A /* Products */,
+				1905ADC04FEEFCB45903D4C2 /* Pods */,
+				EB8C3D647BF8C722501BBFFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		D7B573B825BCC961001B0F5A /* Products */ = {
 			isa = PBXGroup;
@@ -67,6 +85,14 @@
 			path = Crowds;
 			sourceTree = "<group>";
 		};
+		EB8C3D647BF8C722501BBFFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78D89D204B6AE59F4F6298E7 /* Pods_Crowds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7B573CB25BCC963001B0F5A /* Build configuration list for PBXNativeTarget "Crowds" */;
 			buildPhases = (
+				9BF8C5B51DD229ACA814FFCE /* [CP] Check Pods Manifest.lock */,
 				D7B573B325BCC961001B0F5A /* Sources */,
 				D7B573B425BCC961001B0F5A /* Frameworks */,
 				D7B573B525BCC961001B0F5A /* Resources */,
+				D2D4A3BB2FB3C1086B4032E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9BF8C5B51DD229ACA814FFCE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Crowds-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2D4A3BB2FB3C1086B4032E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Crowds/Pods-Crowds-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Crowds/Pods-Crowds-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Crowds/Pods-Crowds-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D7B573B325BCC961001B0F5A /* Sources */ = {
@@ -283,6 +353,7 @@
 		};
 		D7B573CC25BCC963001B0F5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F2FD665C2921B78366F8ABD /* Pods-Crowds.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +373,7 @@
 		};
 		D7B573CD25BCC963001B0F5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1AEC68E94F46730C1496716 /* Pods-Crowds.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
