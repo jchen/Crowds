@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		D7B573C225BCC961001B0F5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B573C025BCC961001B0F5A /* Main.storyboard */; };
 		D7B573C425BCC963001B0F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7B573C325BCC963001B0F5A /* Assets.xcassets */; };
 		D7B573C725BCC963001B0F5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B573C525BCC963001B0F5A /* LaunchScreen.storyboard */; };
+		D7B573D525BCCC11001B0F5A /* MyDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B573D425BCCC11001B0F5A /* MyDeviceViewController.swift */; };
+		D7B573D825BCCC29001B0F5A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B573D725BCCC29001B0F5A /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		D7B573C325BCC963001B0F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7B573C625BCC963001B0F5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7B573C825BCC963001B0F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7B573D425BCCC11001B0F5A /* MyDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDeviceViewController.swift; sourceTree = "<group>"; };
+		D7B573D725BCCC29001B0F5A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F1AEC68E94F46730C1496716 /* Pods-Crowds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crowds.release.xcconfig"; path = "Target Support Files/Pods-Crowds/Pods-Crowds.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +52,6 @@
 				3F2FD665C2921B78366F8ABD /* Pods-Crowds.debug.xcconfig */,
 				F1AEC68E94F46730C1496716 /* Pods-Crowds.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -80,6 +83,8 @@
 				D7B573C025BCC961001B0F5A /* Main.storyboard */,
 				D7B573C325BCC963001B0F5A /* Assets.xcassets */,
 				D7B573C525BCC963001B0F5A /* LaunchScreen.storyboard */,
+				D7B573D425BCCC11001B0F5A /* MyDeviceViewController.swift */,
+				D7B573D725BCCC29001B0F5A /* MapViewController.swift */,
 				D7B573C825BCC963001B0F5A /* Info.plist */,
 			);
 			path = Crowds;
@@ -207,8 +212,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7B573D525BCCC11001B0F5A /* MyDeviceViewController.swift in Sources */,
 				D7B573BF25BCC961001B0F5A /* ViewController.swift in Sources */,
 				D7B573BB25BCC961001B0F5A /* AppDelegate.swift in Sources */,
+				D7B573D825BCCC29001B0F5A /* MapViewController.swift in Sources */,
 				D7B573BD25BCC961001B0F5A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
