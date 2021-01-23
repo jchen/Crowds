@@ -8,5 +8,5 @@ target 'Crowds' do
   # Pods for Crowds
 
   pod "Cluster"
-
+  pod 'MMLanScan', '~> 3.0'
 end

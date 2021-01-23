@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5A189E825BCD7CC00395862 /* MacAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A189E725BCD7CC00395862 /* MacAddress.swift */; };
 		B9EDE373CE9E1210F05A311D /* Pods_Crowds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D89D204B6AE59F4F6298E7 /* Pods_Crowds.framework */; };
 		D7B573BB25BCC961001B0F5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B573BA25BCC961001B0F5A /* AppDelegate.swift */; };
 		D7B573BD25BCC961001B0F5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B573BC25BCC961001B0F5A /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		3F2FD665C2921B78366F8ABD /* Pods-Crowds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crowds.debug.xcconfig"; path = "Target Support Files/Pods-Crowds/Pods-Crowds.debug.xcconfig"; sourceTree = "<group>"; };
 		78D89D204B6AE59F4F6298E7 /* Pods_Crowds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crowds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5A189E725BCD7CC00395862 /* MacAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacAddress.swift; sourceTree = "<group>"; };
 		D7B573B725BCC961001B0F5A /* Crowds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crowds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B573BA25BCC961001B0F5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7B573BC25BCC961001B0F5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				D7B573C325BCC963001B0F5A /* Assets.xcassets */,
 				D7B573C525BCC963001B0F5A /* LaunchScreen.storyboard */,
 				D7B573D425BCCC11001B0F5A /* MyDeviceViewController.swift */,
+				B5A189E725BCD7CC00395862 /* MacAddress.swift */,
 				D7B573D725BCCC29001B0F5A /* MapViewController.swift */,
 				D7B573C825BCC963001B0F5A /* Info.plist */,
 			);
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7B573D525BCCC11001B0F5A /* MyDeviceViewController.swift in Sources */,
+				B5A189E825BCD7CC00395862 /* MacAddress.swift in Sources */,
 				D7B573BF25BCC961001B0F5A /* ViewController.swift in Sources */,
 				D7B573BB25BCC961001B0F5A /* AppDelegate.swift in Sources */,
 				D7B573D825BCCC29001B0F5A /* MapViewController.swift in Sources */,
