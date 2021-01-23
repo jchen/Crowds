@@ -9,13 +9,49 @@ import UIKit
 
 class MyDeviceViewController: UIViewController {
 
+    @IBOutlet weak var myPhoneCard: UIView!
+    @IBOutlet weak var isContributingLabel: UILabel!
+    @IBOutlet weak var toggleSharingButton: UIButton!
+    
+    @IBOutlet weak var sharingInfoView: UIView!
+    
+    var isContributing = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // The subview inside the collection view cell
+        myPhoneCard.layer.cornerRadius = 16.0
+        myPhoneCard.layer.shadowColor = UIColor.gray.cgColor
+        myPhoneCard.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        myPhoneCard.layer.shadowRadius = 6.0
+        myPhoneCard.layer.shadowOpacity = 0.5
+        
+        sharingInfoView.layer.cornerRadius = 16.0
+        sharingInfoView.layer.shadowColor = UIColor.gray.cgColor
+        sharingInfoView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        sharingInfoView.layer.shadowRadius = 6.0
+        sharingInfoView.layer.shadowOpacity = 0.5
+        
+        toggleSharingButton.layer.cornerRadius = 15
+
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func toggleSharing(_ sender: UIButton) {
+        if isContributing {
+            toggleSharingButton.titleLabel!.text = "Stop Sharing"
+            isContributingLabel.text = "Currently Contributing"
+            myPhoneCard.backgroundColor = UIColor.systemIndigo
+        } else {
+            toggleSharingButton.titleLabel!.text = "Start Sharing"
+            isContributingLabel.text = "You're Not Contributing"
+            myPhoneCard.backgroundColor = UIColor.darkGray
+        }
+        isContributing = !isContributing
+    }
+    
     /*
     // MARK: - Navigation
 

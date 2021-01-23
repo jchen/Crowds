@@ -22,23 +22,116 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZi-q5-NYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-248" y="335"/>
+            <point key="canvasLocation" x="-249" y="390"/>
         </scene>
-        <!--My Information-->
+        <!--My Crowd-->
         <scene sceneID="DG4-th-Gdq">
             <objects>
-                <viewController id="d0r-7o-cRc" customClass="MyDeviceViewController" customModule="Crowds" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My Crowd" id="d0r-7o-cRc" customClass="MyDeviceViewController" customModule="Crowds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="otl-hK-IJj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQl-sS-17d">
+                                <rect key="frame" x="20" y="753" width="1220" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Your phone information is anonymized and information identifying you does not reach our servers. Our servers and other users can only see what you see below. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXz-jy-FBU">
+                                <rect key="frame" x="20" y="150" width="374" height="112"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iph11" translatesAutoresizingMaskIntoConstraints="NO" id="y9s-94-gAk">
+                                        <rect key="frame" x="8" y="8" width="54" height="97"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="2jo-ka-ipd"/>
+                                            <constraint firstAttribute="height" constant="97" id="ldm-IA-nPb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2xL-os-bWW">
+                                        <rect key="frame" x="76" y="13" width="184.5" height="86"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Gareth's iPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORQ-S4-9eW">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Currently Contributing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18c-vs-2I9">
+                                                <rect key="frame" x="0.0" y="28.5" width="184.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26Z-X2-MeP">
+                                                <rect key="frame" x="0.0" y="56" width="120" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="9WC-du-6I7"/>
+                                                    <constraint firstAttribute="height" constant="30" id="OGM-fJ-wiJ"/>
+                                                </constraints>
+                                                <state key="normal" title="Stop Sharing">
+                                                    <color key="titleColor" systemColor="systemGray6Color"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="toggleSharing:" destination="d0r-7o-cRc" eventType="touchUpInside" id="TvP-dQ-Sfc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2xL-os-bWW" secondAttribute="bottom" constant="13" id="86L-Nv-vOX"/>
+                                    <constraint firstItem="2xL-os-bWW" firstAttribute="leading" secondItem="y9s-94-gAk" secondAttribute="trailing" constant="14" id="8MB-UG-gxY"/>
+                                    <constraint firstAttribute="height" constant="112" id="RHn-wL-oJq"/>
+                                    <constraint firstItem="y9s-94-gAk" firstAttribute="top" secondItem="iXz-jy-FBU" secondAttribute="top" constant="8" id="Vqj-8f-cBJ"/>
+                                    <constraint firstItem="y9s-94-gAk" firstAttribute="leading" secondItem="iXz-jy-FBU" secondAttribute="leading" constant="8" id="lO8-V8-WOP"/>
+                                    <constraint firstAttribute="bottom" secondItem="y9s-94-gAk" secondAttribute="bottom" constant="8" id="tS1-Pq-Dhg"/>
+                                    <constraint firstItem="2xL-os-bWW" firstAttribute="top" secondItem="iXz-jy-FBU" secondAttribute="top" constant="13" id="v0u-g2-rSE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R00-pH-krq">
+                                <rect key="frame" x="20" y="282" width="374" height="415"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What Everyone Sees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FF-v8-Iav">
+                                        <rect key="frame" x="16" y="15" width="167" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RP3-Ae-5EH">
+                                        <rect key="frame" x="225" y="0.0" width="149" height="415"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Inl-Lh-fbk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iXz-jy-FBU" firstAttribute="leading" secondItem="Inl-Lh-fbk" secondAttribute="leading" constant="20" id="Rkk-aE-PJa"/>
+                            <constraint firstItem="iXz-jy-FBU" firstAttribute="top" secondItem="Inl-Lh-fbk" secondAttribute="top" constant="10" id="Ska-3T-eCb"/>
+                            <constraint firstItem="Inl-Lh-fbk" firstAttribute="trailing" secondItem="iXz-jy-FBU" secondAttribute="trailing" constant="20" id="d07-Od-8Rv"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Information" image="iphone" catalog="system" id="AP6-ti-Ouo"/>
+                    <navigationItem key="navigationItem" title="My Crowd" id="OPu-Rd-YEk"/>
+                    <connections>
+                        <outlet property="isContributingLabel" destination="18c-vs-2I9" id="ie5-e0-Yc8"/>
+                        <outlet property="myPhoneCard" destination="iXz-jy-FBU" id="ioQ-VP-KSL"/>
+                        <outlet property="sharingInfoView" destination="R00-pH-krq" id="PoK-bq-ekQ"/>
+                        <outlet property="toggleSharingButton" destination="26Z-X2-MeP" id="5U2-f2-gdx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRv-E2-aFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-248" y="-272"/>
+            <point key="canvasLocation" x="660.86956521739137" y="-272.54464285714283"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="spY-fc-sqK">
@@ -50,7 +143,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="d0r-7o-cRc" kind="relationship" relationship="viewControllers" id="Rs8-jF-Tya"/>
+                        <segue destination="JRk-07-4cx" kind="relationship" relationship="viewControllers" id="Rs8-jF-Tya"/>
                         <segue destination="aTe-PV-XSv" kind="relationship" relationship="viewControllers" id="Wmx-0a-B1b"/>
                     </connections>
                 </tabBarController>
@@ -58,12 +151,47 @@
             </objects>
             <point key="canvasLocation" x="-1138" y="31"/>
         </scene>
+        <!--My Crowd-->
+        <scene sceneID="FhY-fQ-DEF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JRk-07-4cx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Crowd" image="iphone" catalog="system" id="AP6-ti-Ouo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="NoY-iU-g6z">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="d0r-7o-cRc" kind="relationship" relationship="rootViewController" id="95o-Oa-qbD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVW-KW-nOo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-249.27536231884059" y="-272.54464285714283"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="iph11" width="800" height="637"/>
         <image name="iphone" catalog="system" width="108" height="128"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
