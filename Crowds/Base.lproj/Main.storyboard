@@ -15,14 +15,23 @@
                     <view key="view" contentMode="scaleToFill" id="bcW-p7-b0n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cc2-nv-7rR">
+                                <rect key="frame" x="38" y="80" width="327" height="677"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3IZ-6g-Ieg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="rUo-Tr-KgU"/>
+                    <connections>
+                        <outlet property="mapView" destination="cc2-nv-7rR" id="7sa-jJ-oww"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZi-q5-NYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-249" y="390"/>
+            <point key="canvasLocation" x="-249.27536231884059" y="389.73214285714283"/>
         </scene>
         <!--My Crowd-->
         <scene sceneID="DG4-th-Gdq">
@@ -32,59 +41,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXz-jy-FBU">
-                                <rect key="frame" x="20" y="150" width="374" height="112"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iph11" translatesAutoresizingMaskIntoConstraints="NO" id="y9s-94-gAk">
-                                        <rect key="frame" x="8" y="8" width="54" height="97"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="54" id="2jo-ka-ipd"/>
-                                            <constraint firstAttribute="height" constant="97" id="ldm-IA-nPb"/>
-                                        </constraints>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2xL-os-bWW">
-                                        <rect key="frame" x="76" y="13" width="184.5" height="86"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Gareth's iPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORQ-S4-9eW">
-                                                <rect key="frame" x="0.0" y="0.0" width="120" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Currently Contributing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18c-vs-2I9">
-                                                <rect key="frame" x="0.0" y="28.5" width="184.5" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26Z-X2-MeP">
-                                                <rect key="frame" x="0.0" y="56" width="120" height="30"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="120" id="9WC-du-6I7"/>
-                                                    <constraint firstAttribute="height" constant="30" id="OGM-fJ-wiJ"/>
-                                                </constraints>
-                                                <state key="normal" title="Stop Sharing">
-                                                    <color key="titleColor" systemColor="systemGray6Color"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="toggleSharing:" destination="d0r-7o-cRc" eventType="touchUpInside" id="TvP-dQ-Sfc"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="2xL-os-bWW" secondAttribute="bottom" constant="13" id="86L-Nv-vOX"/>
-                                    <constraint firstItem="2xL-os-bWW" firstAttribute="leading" secondItem="y9s-94-gAk" secondAttribute="trailing" constant="14" id="8MB-UG-gxY"/>
-                                    <constraint firstAttribute="height" constant="112" id="RHn-wL-oJq"/>
-                                    <constraint firstItem="y9s-94-gAk" firstAttribute="top" secondItem="iXz-jy-FBU" secondAttribute="top" constant="8" id="Vqj-8f-cBJ"/>
-                                    <constraint firstItem="y9s-94-gAk" firstAttribute="leading" secondItem="iXz-jy-FBU" secondAttribute="leading" constant="8" id="lO8-V8-WOP"/>
-                                    <constraint firstAttribute="bottom" secondItem="y9s-94-gAk" secondAttribute="bottom" constant="8" id="tS1-Pq-Dhg"/>
-                                    <constraint firstItem="2xL-os-bWW" firstAttribute="top" secondItem="iXz-jy-FBU" secondAttribute="top" constant="13" id="v0u-g2-rSE"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R00-pH-krq">
                                 <rect key="frame" x="20" y="282" width="374" height="495"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -309,6 +265,59 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXz-jy-FBU">
+                                <rect key="frame" x="20" y="150" width="374" height="112"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iph11" translatesAutoresizingMaskIntoConstraints="NO" id="y9s-94-gAk">
+                                        <rect key="frame" x="8" y="8" width="54" height="97"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="2jo-ka-ipd"/>
+                                            <constraint firstAttribute="height" constant="97" id="ldm-IA-nPb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2xL-os-bWW">
+                                        <rect key="frame" x="76" y="13" width="184.5" height="86"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Gareth's iPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORQ-S4-9eW">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Currently Contributing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18c-vs-2I9">
+                                                <rect key="frame" x="0.0" y="28.5" width="184.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26Z-X2-MeP">
+                                                <rect key="frame" x="0.0" y="56" width="120" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="9WC-du-6I7"/>
+                                                    <constraint firstAttribute="height" constant="30" id="OGM-fJ-wiJ"/>
+                                                </constraints>
+                                                <state key="normal" title="Stop Sharing">
+                                                    <color key="titleColor" systemColor="systemGray6Color"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="toggleSharing:" destination="d0r-7o-cRc" eventType="touchUpInside" id="TvP-dQ-Sfc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2xL-os-bWW" secondAttribute="bottom" constant="13" id="86L-Nv-vOX"/>
+                                    <constraint firstItem="2xL-os-bWW" firstAttribute="leading" secondItem="y9s-94-gAk" secondAttribute="trailing" constant="14" id="8MB-UG-gxY"/>
+                                    <constraint firstAttribute="height" constant="112" id="RHn-wL-oJq"/>
+                                    <constraint firstItem="y9s-94-gAk" firstAttribute="top" secondItem="iXz-jy-FBU" secondAttribute="top" constant="8" id="Vqj-8f-cBJ"/>
+                                    <constraint firstItem="y9s-94-gAk" firstAttribute="leading" secondItem="iXz-jy-FBU" secondAttribute="leading" constant="8" id="lO8-V8-WOP"/>
+                                    <constraint firstAttribute="bottom" secondItem="y9s-94-gAk" secondAttribute="bottom" constant="8" id="tS1-Pq-Dhg"/>
+                                    <constraint firstItem="2xL-os-bWW" firstAttribute="top" secondItem="iXz-jy-FBU" secondAttribute="top" constant="13" id="v0u-g2-rSE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Inl-Lh-fbk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -368,7 +377,6 @@
                     <tabBarItem key="tabBarItem" title="My Crowd" image="iphone" catalog="system" id="AP6-ti-Ouo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="NoY-iU-g6z">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
