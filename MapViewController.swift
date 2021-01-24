@@ -57,7 +57,7 @@ class MapViewController: UIViewController {
     @IBAction func addAnnotations(_ sender: UIButton? = nil) {
         // Add annotations to the manager.
         let coords = getData()!
-        let annotations: [Annotation] = (0..<200).map { i in
+        let annotations: [Annotation] = (0..<300).map { i in
             let annotation = Annotation()
             annotation.coordinate = CLLocationCoordinate2D(
                 latitude: coords[i][0],
