@@ -54,6 +54,7 @@ class MyDeviceViewController: UIViewController {
         stoppedSharing()
         
     }
+
     
     func updateData() {
         vagueLocationLabel.isHidden = true

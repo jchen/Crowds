@@ -9,5 +9,5 @@ target 'Crowds' do
 
   pod "Cluster"
   pod 'MMLanScan', '~> 3.0'
-  pod 'BCryptSwift'
+  pod "BCryptSwift"
 end
