@@ -57,7 +57,7 @@ class MapViewController: UIViewController {
     @IBAction func addAnnotations(_ sender: UIButton? = nil) {
         // Add annotations to the manager.
         let coords = getData()!
-        let annotations: [Annotation] = (0..<1000).map { i in
+        let annotations: [Annotation] = (0..<200).map { i in
             let annotation = Annotation()
             annotation.coordinate = CLLocationCoordinate2D(
                 latitude: coords[i][0],
@@ -154,20 +154,14 @@ extension MapViewController {
 
 extension MKMapView {
     func annotationView(selection: MapViewController.Selection, annotation: MKAnnotation?, reuseIdentifier: String) -> MKAnnotationView {
-        /*let annotationView = self.annotationView(of: ImageCountClusterAnnotationView.self, annotation: annotation, reuseIdentifier: reuseIdentifier)
-        let c = Int(annotationView.countLabel.text!)!
-        if c == 0 {
-            annotationView.image = UIImage(systemName: "arrow.down.circle.fill")?.withTintColor(.red)
-        } else if c < 10 {
-            annotationView.image = UIImage(systemName: "arrow.right.circle.fill")
-        } else {
-            annotationView.image = UIImage(systemName: "arrow.up.circle.fill")
-        }
-        annotationView.image = annotationView.image?.withTintColor(.green)
-        annotationView.countLabel.text = ""
-        return annotationView*/
         let annotationView = self.annotationView(of: CountClusterAnnotationView.self, annotation: annotation, reuseIdentifier: reuseIdentifier)
-        annotationView.countLabel.backgroundColor = .green
+        if annotationView.countLabel.text! == "L" {
+            annotationView.countLabel.backgroundColor = .green
+        } else if annotationView.countLabel.text! == "M" {
+            annotationView.countLabel.backgroundColor = .orange
+        } else {
+            annotationView.countLabel.backgroundColor = .red
+        }
         return annotationView
         /*switch selection {
         case .count:
@@ -183,7 +177,7 @@ extension MKMapView {
             let annotationView = self.annotationView(of: MKAnnotationView.self, annotation: annotation, reuseIdentifier: reuseIdentifier)
             annotationView.image = .pin
             return annotationView
-        }*/
+         }*/
     }
 }
 
