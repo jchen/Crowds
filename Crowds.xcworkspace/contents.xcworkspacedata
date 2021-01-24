@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MapViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:Crowds.xcodeproj">
    </FileRef>
    <FileRef

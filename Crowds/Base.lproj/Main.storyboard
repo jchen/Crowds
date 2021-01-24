@@ -26,7 +26,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="rUo-Tr-KgU"/>
                     <connections>
-                        <outlet property="mapView" destination="cc2-nv-7rR" id="7sa-jJ-oww"/>
+                        <outlet property="mapView" destination="cc2-nv-7rR" id="iFo-Qu-SWU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZi-q5-NYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
