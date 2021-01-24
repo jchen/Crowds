@@ -15,29 +15,31 @@ import Foundation
 
 import UIKit
 import MMLanScan
+import BCryptSwift
 
 class MacFinder : NSObject, MMLANScannerDelegate{
     
     var lanScanner : MMLANScanner!
     var devices : [MMDevice] = []
+    var hashes : [String] = []
     
     func lanScanDidFindNewDevice(_ device: MMDevice!) {
-        print(device.macAddress ?? "NA")
-        print(device.brand ?? "NA")
-        if device != nil {
+        if device != nil && device.macAddress != nil {
             devices.append(device)
+            let salt = BCryptSwift.generateSaltWithNumberOfRounds(12)
+            let hashed = BCryptSwift.hashPassword(device.macAddress, withSalt: salt)
+            let truncated = String(hashed!.prefix(20))
+            hashes.append(truncated)
         }
     }
     
     func lanScanDidFinishScanning(with status: MMLanScannerStatus) {
-        print()
     }
     
     func lanScanDidFailedToScan() {
-        print()
     }
 
-    func setup() {
+    func scan() {
         self.lanScanner = MMLANScanner(delegate: self)
         self.lanScanner.start()
         self.lanScanner.stop()
