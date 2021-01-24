@@ -1,0 +1,24 @@
+PODS:
+  - BCryptSwift (1.1)
+  - Cluster (3.0.3)
+  - MMLanScan (3.0.0)
+
+DEPENDENCIES:
+  - BCryptSwift
+  - Cluster
+  - MMLanScan (~> 3.0)
+
+SPEC REPOS:
+  trunk:
+    - BCryptSwift
+    - Cluster
+    - MMLanScan
+
+SPEC CHECKSUMS:
+  BCryptSwift: f69992ea5685f6714260842c2770688043b89ab2
+  Cluster: d72510594f60d901905953aafdc811d1888177ae
+  MMLanScan: 86a0f77edbf163be30c1f58321469c7c8ce4c50e
+
+PODFILE CHECKSUM: 15f159e04fe9c3d51eac46b4c93a26f3677329e2
+
+COCOAPODS: 1.10.1

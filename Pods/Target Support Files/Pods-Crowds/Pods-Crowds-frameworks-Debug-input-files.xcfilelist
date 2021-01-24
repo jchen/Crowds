@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Crowds/Pods-Crowds-frameworks.sh
+${BUILT_PRODUCTS_DIR}/BCryptSwift/BCryptSwift.framework
+${BUILT_PRODUCTS_DIR}/Cluster/Cluster.framework
+${BUILT_PRODUCTS_DIR}/MMLanScan/MMLanScan.framework

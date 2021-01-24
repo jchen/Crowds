@@ -1,0 +1,6 @@
+framework module Pods_Crowds {
+  umbrella header "Pods-Crowds-umbrella.h"
+
+  export *
+  module * { export * }
+}
